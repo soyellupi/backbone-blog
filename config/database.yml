@@ -1,0 +1,13 @@
+defaults: &defaults
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
+
+development:
+  <<: *defaults
+  database: learn_backbone_development
+
+test:
+  <<: *defaults
+  database: learn_backbone_test

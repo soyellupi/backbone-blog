@@ -1,0 +1,10 @@
+<div id="users"></div>
+<div id="posts"></div>
+
+<script type="text/javascript">
+  $(function() {
+    window.router = new LearnBackbone.Routers.UsersRouter({users: <%= @users.to_json.html_safe -%>});
+    window.router = new LearnBackbone.Routers.PostsRouter({});
+    Backbone.history.start();
+  });
+</script>
